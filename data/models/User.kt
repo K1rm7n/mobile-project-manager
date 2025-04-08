@@ -5,3 +5,7 @@ data class User(
     val role: UserRole = UserRole.MEMBER,
     val profileImage: String? = null
 )
+
+enum class UserRole {
+    ADMIN, PROJECT_MANAGER, MEMBER
+}
