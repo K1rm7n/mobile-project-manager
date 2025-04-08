@@ -247,4 +247,23 @@ fun NumberPicker(
             onClick = { 
                 if (value < range.last) onValueChange(value + 1) 
             },
-            modifier = Modifier.width(64.dp
+            modifier = Modifier.width(64.dp)
+        ) {
+            Text("▲")
+        }
+        
+        Text(
+            text = value.toString(),
+            style = MaterialTheme.typography.titleMedium
+        )
+        
+        Button(
+            onClick = { 
+                if (value > range.first) onValueChange(value - 1) 
+            },
+            modifier = Modifier.width(64.dp)
+        ) {
+            Text("▼")
+        }
+    }
+}
